@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>Watches </title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+
+</head>
+<body>
+
+  <header class="py-sm-3 pt-3 pb-2" id="home">
+            <div class="container">
+                <!-- nav -->
+                <div class="top-w3pvt d-flex">
+                    <div id="logo">
+                        <h1> <a href="index"><span class="log-w3pvt">W</span>atches</a> <label class="sub-des">Online Store</label></h1>
+                    </div>
+
+<!--update product-->
+
+<div class="map-full">
+	<div class="contact-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 mt-4">
+					<div class="heading-title text-center">
+<!--						<h1 style="margin-left:50px;">Update Product</h1>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="form1" class="map-full" style="margin-top:50px;">
+	<div class="contact-box">
+        <div class="container"style="margin-top:50px;margin-right:350px;">
+            <form method="post" action="../updating/{{d.id}}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <b>Product Image:<br></b><img src="{{d.pimg.url}}" height="150px;"><br>
+                <b>Product Name:</b><input type="text" class="form-control" name="upname" value="{{d.pname}}" readonly><br>
+                <b>Description:</b><input type="text" class="form-control" name="updescription" value="{{d.description}}" readonly><br>
+<!--                <b>Quantity:</b><input type="number" class="form-control" name="upquan" value="{{d.quantity}}"><br>-->
+                <b>Price:</b><input type="number" class="form-control" name="upprice" value="{{d.price}}" ><br>
+                <div class="submit-button text-center">
+                    <button class="btn-primary" id="submit" type="submit">Update</button>
+                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--//update product-->
+                </div>
+            </div>
+  </header>
+</body>
+</html>

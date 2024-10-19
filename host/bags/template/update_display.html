@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+     <title>Watches </title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+
+</head>
+<body>
+
+  <header class="py-sm-3 pt-3 pb-2" id="home">
+            <div class="container">
+                <!-- nav -->
+                <div class="top-w3pvt d-flex">
+                    <div id="logo">
+                        <h1> <a href="index"><span class="log-w3pvt">W</span>atches</a> <label class="sub-des">Online Store</label></h1>
+                    </div>
+
+<!-- message -->
+<!--	{% if messages %}-->
+<!--	<div class="container">-->
+<!--		<div class="alert alert-success alert-dismissible messages">-->
+<!--			{% for message in messages %}-->
+<!--				<button type="button" class="close" data-dismiss="alert">🞭</button>-->
+<!--			 {{message}}-->
+<!--	  	</div>-->
+<!--		 {% endfor %}-->
+<!--	</div>-->
+<!--	{% endif %}-->
+<!-- //message -->
+
+
+<div class="map-full">
+	<div class="contact-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 mt-4">
+					<div class="heading-title text-center">
+<!--						<h1 style="margin-left:50px;">Update Product</h1>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="form1" class="map-full" style="margin-top:50px;margin-right:700px;">
+	<div class="contact-box" style="margin-top:100px;margin-right:500px;">
+        <div class="container"style="margin-top:100px;margin-right:400px;">
+	<div class="container" style="text-align:center;">
+			<table class="table table-stripped mt-5">
+				<thead>
+				<tr>
+					<th><center>Product Image</center></th>
+					<th><center>Product Name</center></th>
+					<th><center>Description</center></th>
+<!--					<th><center>Quantity</center></th>-->
+					<th><center>Price</center></th>
+		  		</tr>
+		  		</thead>
+				<tbody>
+				{% for i in udp %}
+				<tr>
+					<td><center><img src="{{i.pimg.url}}" height="150" width="150"></center></td>
+					<td><center>{{i.pname}}</center></td>
+					<td><center>{{i.description}}</center></td>
+<!--					<td><center>{{i.quantity}}</center></td>-->
+					<td ><center>₹ {{i.price}} </center></td>
+
+				</tr>
+    			{% endfor %}
+    			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<!--//product details-->
+				</div>
+			</div>
+  </header>
+</body>
+</html>

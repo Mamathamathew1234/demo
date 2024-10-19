@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Watches</title>
+   <title>Watches Ecommerce Category Bootstrap Responsive Web Template | Shop :: W3layouts</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+
+
+</head>
+<body>
+	<!-- HEADER -->
+<!--		<header>-->
+<!--			&lt;!&ndash; TOP HEADER &ndash;&gt;-->
+<!--			<div id="top-header">-->
+<!--				<div class="container">-->
+<!--					<ul class="header-links pull-left">-->
+<!--						<li><a href="#"><i class="fa fa-phone"></i> +91 9876543210</a></li>-->
+<!--						<li><a href="#"><i class="fa fa-envelope-o"></i> ecart@email.com</a></li>-->
+<!--						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>-->
+<!--					</ul>-->
+ <div class="main-sec inner-page">
+	 <header class="py-sm-3 pt-3 pb-2" id="home">
+            <div class="container">
+                <!-- nav -->
+                <div class="top-w3pvt d-flex">
+                    <div id="logo">
+                        <h1> <a href="index"><span class="log-w3pvt">W</span>atches</a> <label class="sub-des">Online Store</label></h1>
+                    </div>
+                  <div class="forms ml-auto">
+                        <a href="userhome" class="btn">Home</a>
+                        <a href="logout" class="btn"><span class="fa fa-pencil-square-o"></span> logout</a>
+                    </div>
+				</div>
+			</div>
+	 </header>
+			<!-- /TOP HEADER -->
+
+			<!-- MAIN HEADER -->
+<!--			<div id="header">-->
+<!--				&lt;!&ndash; container &ndash;&gt;-->
+<!--				<div class="container">-->
+<!--					&lt;!&ndash; row &ndash;&gt;-->
+<!--					<div class="row">-->
+<!--						&lt;!&ndash; LOGO &ndash;&gt;-->
+<!--						<div class="col-md-3">-->
+<!--							<div class="header-logo">-->
+<!--								<a href="index" class="logo">-->
+<!--									<img src="{% static './img/ekWhiteLogo.png'%}" alt="" style="height: 36px; width: 100px; margin-top: 12px;">-->
+<!--								</a>-->
+<!--							</div>-->
+<!--						</div>-->
+						<!-- /LOGO -->
+						<script>
+							function copyTextValue() {
+								var e = document.getElementById("select");
+								var val = e.options[e.selectedIndex].value;
+								document.getElementById("1").value = val;
+							}
+						</script>
+						<!-- SEARCH BAR -->
+<!--						<div class="col-md-6">-->
+<!--							<div class="header-search">-->
+<!--								<form action="search" method="post">-->
+<!--									{% csrf_token%}-->
+<!--									<select class="input-select" id="select"onchange="copyTextValue()">-->
+<!--										<option value="">All Categories</option>-->
+<!--										<option value="laptop">Laptop</option>-->
+<!--										<option value="smartphone">Smartphone</option>-->
+<!--										<option value="camera">Camera</option>-->
+<!--										<option value="headphone">headphone</option>-->
+<!--										<option value="myaccound">Myaccound</option>-->
+<!--										<option value="cart">Cart</option>-->
+<!--										<option value="checkout">Checkout</option>-->
+<!--										<option value="Feedback">Feedback</option>-->
+
+
+<!--									</select>-->
+<!--									<input class="input" placeholder="Search here" id="1" name="sr">-->
+<!--									<input type="submit" class="search-btn">-->
+								</form>
+							</div>
+						</div>
+						<!-- ACCOUNT -->
+						<div class="col-md-3 clearfix">
+							<div class="header-ctn">
+								<!-- Wishlist -->
+
+
+
+								<!-- /Wishlist -->
+
+								<!-- Cart -->
+								<!-- <div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+										{% if datas3 != 0 %}
+										<i class="fa fa-shopping-cart"></i>
+										<span>Your Cart</span>
+										<div class="qty" >{{datas3}}</div>
+										{% else %}
+										<i class="fa fa-shopping-cart"></i>
+										<span>Your Cart</span>
+										<div></div>
+										{% endif %}
+
+
+									</a>
+									<div class="cart-dropdown">
+										<div class="cart-list">
+											{% for i in datas2%}
+											<div class="product-widget">
+												<div class="product-img">
+													<img src="{{i.item_details.mi.url}}" alt="">
+												</div>
+
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">{{i.item_details.pname}}</a></h3>
+													<h4 class="product-price"><span class="qty">x</span>{{i.item_details.price}}.00</h4>
+												</div>
+												<button class="delete"><a href="delete_c/{{i.pk}}" style="color: aliceblue;"><i class="fa fa-close"></i></a></button>
+											</div>
+											{% endfor%}
+
+
+										</div>
+										<div class="cart-summary">
+											<small>{{datas3}}(s) selected</small>
+											<h5>SUBTOTAL:</h5>
+										</div>
+										<div class="cart-btns">
+											<a href="viewcart">View Cart</a>
+											<a href="checkout">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+										</div>
+									</div>
+								</div>
+								/Cart -->
+
+								<!-- Menu Toogle -->
+<!--								<div class="menu-toggle">-->
+<!--									<a href="#">-->
+<!--										<i class="fa fa-bars"></i>-->
+<!--										<span>Menu</span>-->
+<!--									</a>-->
+<!--								</div>-->
+								<!-- /Menu Toogle -->
+							</div>
+						</div>
+						<!-- /ACCOUNT -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</div>
+			<!-- /MAIN HEADER -->
+		</header>
+		<!-- /HEADER -->
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+<!--					<ul class="main-nav nav navbar-nav">-->
+<!--						<li ><a href="user">Home</a></li>-->
+<!--						<li><a href="user_laptop">Laptops</a></li>-->
+<!--						<li><a href="user_headphone">Head Phone</a></li>-->
+<!--						<li><a href="user_camera">Cameras</a></li>-->
+<!--						<li ><a href="user_smartphone">Smartphones</a></li>-->
+
+<!--					</ul>-->
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+
+		<div class="section">
+			<!-- container -->
+
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+
+					<!-- section title -->
+
+
+					</div>
+					<!-- /section title -->
+
+					<!-- Products tab & slick -->
+					<div class="col-md-12">
+						<div class="row">
+							<div class="products-tabs">
+								<!-- tab -->
+								<div id="tab1" class="tab-pane active">
+<!--									<div class="products-slick" data-nav="#slick-nav-1">-->
+
+
+
+
+        <div class="row shop-wthree-info text-center" >
+               {% for i in datas %}
+                <div class="col-lg-3 shop-info-grid text-center mt-4" >
+
+                    <div class="product-shoe-info shoe">
+<!--            <div class="product"><a href="delete_w/{{i.pk}}" style="margin-left: 230px;"><i class="fa fa-close"></i>-->
+
+                        <div class="men-thumb-item">
+                            <img src="{{i.item_details.pimg.url}}"  class="img-fluid" alt="">
+
+                        </div>
+                        <div class="item-info-product">
+                            <h4
+                                 class="product-name">{{i.item_details.pname}}
+                            </h4>
+
+                            <div class="product_price">
+                                <div class="grid-price">
+                                    <h4 class="product-price">₹ {{i.item_details.price}}</h4>
+                                </div>
+<!--                                <button type="button">Buy now</button>-->
+                                <button type="button"><a href="delete_wishlist/{{i.pk}}">Remove</a></button>
+<!--                                <a href="wishlist/{{i.pk}}" class="btn"><span class="fa fa-heart-o"style="color:black"></span> </a>-->
+
+                            </div>
+                                                <div class="add-to-cart">
+												{% if i.item_details in datas2 %}
+												<button class="add-to-cart-btn" style="background-color: #fb641b;"><i class="fa fa-bolt" style="color: white;"></i><a href="viewcart"class="btn submit-btn" style="color: aliceblue; font-family: Roboto,Arial,sans-serif; font-size: 16px;">Go to cart</a></button>
+
+												<br><br>
+												{% else %}
+												<button class="add-to-cart-btn" style="background-color: #ff9f00; size: 10px;"><i class="fa fa-shopping-cart" style="color: white;"></i><a href="cart/{{i.item_details.id}}"class="btn submit-btn" style="color: white; font-family: Roboto,Arial,sans-serif; font-size: 16px;">Add to cart</a></button>
+
+												{% endif%}
+
+											</div>
+<!--										</div>-->
+<!--                            <ul class="stars">-->
+<!--                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>-->
+<!--                                <li><a href="#"><span class="fa fa-star" aria-hidden="true"></span></a></li>-->
+<!--                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>-->
+<!--                                <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true"></span></a></li>-->
+<!--                                <li><a href="#"><span class="fa fa-star-o" aria-hidden="true"></span></a></li>-->
+<!--                            </ul>-->
+                        </div>
+
+                    </div>
+
+                </div>
+                {% endfor %}
+
+
+
+									<div id="slick-nav-1" class="products-slick-nav"></div>
+								</div>
+								<!-- /tab -->
+							</div>
+						</div>
+					</div>
+					<!-- Products tab & slick -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
+		<!-- HOT DEAL SECTION -->
+
+		<!-- /HOT DEAL SECTION -->
+
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
+		<!-- SECTION -->
+
+		<!-- /SECTION -->
+
+		<!-- NEWSLETTER -->
+
+		<!-- /NEWSLETTER -->
+
+
+	 <!--/shipping-->
+    <section class="shipping-wthree">
+        <div class="shiopping-grids d-lg-flex">
+            <div class="col-lg-4 shiopping-w3pvt-gd text-center">
+                <div class="icon-gd"><span class="fa fa-truck" aria-hidden="true"></span>
+                </div>
+                <div class="icon-gd-info">
+                    <h3>FREE SHIPPING</h3>
+                    <p>On all order over $2000</p>
+                </div>
+            </div>
+            <div class="col-lg-4 shiopping-w3pvt-gd sec text-center">
+                <div class="icon-gd"><span class="fa fa-bullhorn" aria-hidden="true"></span></div>
+                <div class="icon-gd-info">
+                    <h3>FREE RETURN</h3>
+                    <p>On 1st exchange in 30 days</p>
+                </div>
+            </div>
+            <div class="col-lg-4 shiopping-w3pvt-gd text-center">
+                <div class="icon-gd"> <span class="fa fa-gift" aria-hidden="true"></span></div>
+                <div class="icon-gd-info">
+                    <h3>MEMBER DISCOUNT</h3>
+                    <p>Register &amp; save up to $29%</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!--//shipping-->
+
+
+
+		<!-- footer -->
+    <div class="footer_agileinfo_topf py-5">
+        <div class="container py-md-5">
+            <div class="row">
+                <div class="col-lg-3 footer_wthree_gridf mt-lg-5">
+                    <h2><a href="index"><span>W</span>atches
+                        </a> </h2>
+                    <label class="sub-des2">Online Store</label>
+                </div>
+                <div class="col-lg-3 footer_wthree_gridf mt-md-0 mt-4">
+                    <ul class="footer_wthree_gridf_list">
+                        <li>
+                            <a href="index"><span class="fa fa-angle-right" aria-hidden="true"></span> Home</a>
+                        </li>
+                        <li>
+                            <a href="about"><span class="fa fa-angle-right" aria-hidden="true"></span> About</a>
+                        </li>
+                        <li>
+                            <a href="shop"><span class="fa fa-angle-right" aria-hidden="true"></span> Shop</a>
+                        </li>
+                        <li>
+                            <a href="shop"><span class="fa fa-angle-right" aria-hidden="true"></span>Collections</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer_wthree_gridf mt-md-0 mt-sm-4 mt-3">
+                    <ul class="footer_wthree_gridf_list">
+                        <li>
+                            <a href="single"><span class="fa fa-angle-right" aria-hidden="true"></span> Extra Page</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><span class="fa fa-angle-right" aria-hidden="true"></span> Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a href="single"><span class="fa fa-angle-right" aria-hidden="true"></span> Shop Single</a>
+                        </li>
+                        <li>
+                            <a href="contact"><span class="fa fa-angle-right" aria-hidden="true"></span> Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 footer_wthree_gridf mt-md-0 mt-sm-4 mt-3">
+                    <ul class="footer_wthree_gridf_list">
+                        <li>
+                            <a href="login"><span class="fa fa-angle-right" aria-hidden="true"></span> Login </a>
+                        </li>
+
+                        <li>
+                            <a href="register"><span class="fa fa-angle-right" aria-hidden="true"></span>Register</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="fa fa-angle-right" aria-hidden="true"></span>Privacy & Policy</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+    </div>
+    <!-- //footer -->
+
+		<!-- jQuery Plugins -->
+		<script src="{% static 'js/jquery.min.js'%}"></script>
+		<script src="{% static 'js/bootstrap.min.js'%}"></script>
+		<script src="{% static 'js/slick.min.js'%}"></script>
+		<script src="{% static 'js/nouislider.min.js'%}"></script>
+		<script src="{% static 'js/jquery.zoom.min.js'%}"></script>
+		<script src="{% static 'js/main.js'%}"></script>
+    </div>
+	</body>
+</html>
+
+
+</body>
+</html>

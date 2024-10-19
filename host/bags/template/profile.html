@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+     <title>Watches Ecommerce Category Bootstrap Responsive Web Template | Shop :: W3layouts</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+
+
+
+</head>
+<body>
+
+<div class="main-sec inner-page">
+        <!-- //header -->
+        <header class="py-sm-3 pt-3 pb-2" id="home">
+            <div class="container">
+                <!-- nav -->
+                <div class="top-w3pvt d-flex">
+                    <div id="logo">
+                        <h1> <a href="index"><span class="log-w3pvt">W</span>atches</a> <label class="sub-des">Online Store</label></h1>
+                    </div>
+				</div>
+			</div>
+		</header>
+<!--                   <div class="forms ml-auto">-->
+  <div class="forms ml-auto">
+					<a href="userhome" class="btn">Home</a>
+
+<!--				   </div>-->
+					   
+					 <a href="logout" class="btn"><span class="fa fa-sign-out"style="color:black"></span> Logout</a>
+					</div>
+
+
+<!--<div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-5" align="center" style="position:absolute;left:400px;bottom:1px;top:300px;">-->
+<!--                <div class="card p-0" >-->
+<!--					<form method="post" action="" enctype="multipart/form-data">-->
+<!--						{% csrf_token %}-->
+<!--						{% if user %}-->
+<!--						<div class="card-image">-->
+<!--							<img src="{{user.pimg.url}}" alt="">-->
+<!--						</div>-->
+<!--						<div class="card-content d-flex flex-column align-items-center">-->
+<!--							<h3 class="pt-2">{{user.User_Name}}</h3>-->
+<!--							<h5>{{user.User_Email}}</h5>-->
+<!--							<h5>{{user.UserPhone}}</h5>-->
+<!--                            <button type="submit"><a href="profile_edit/{{user.id}}">Edit profile</a></button>-->
+
+<!--&lt;!&ndash;							<button type="submit" style="margin-top:17px;" class="btn-success btn-lg  button-order"><a href="profile_edit/{{user.id}}">Edit profile</a></button>&ndash;&gt;-->
+<!--						</div>-->
+<!--						{% endif %}-->
+<!--					</form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--		</div>-->
+<!--	</div>-->
+
+
+<!--user profile-->
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-4" align="center" style="position:absolute;left:400px;bottom:1px;top:300px;">
+                <div class="card p-0" >
+					<form method="post" action="" enctype="multipart/form-data">
+
+					{% csrf_token %}
+						{% if user %}
+
+						<div class="card-image">
+							<img src="{{user.u_img.url}}" alt="">
+						</div>
+						<div class="card-content d-flex flex-column align-items-center">
+                                      <h1 style="margin-left: 150px; margin-top: -30px;"><img src="{{i.photo.url}}" style="width: 50px; margin-left: 20px;"></h1>
+
+							<h3 class="pt-2">{{user.User_Name}}</h3>
+							<h5>{{user.User_Email}}</h5>
+							<h5>{{user.UserPhone}}</h5>
+
+							<button type="submit" style="margin-top:17px;" class="btn"><a href="pro_edit/{{user.id}}">View Profile</a></button>
+						</div>
+						{% endif %}
+					</form>
+                </div>
+            </div>
+		</div>
+	</div>
+<!--//user profile-->
+
+
+
+</div>
+</body>
+</html>

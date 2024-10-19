@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+</head>
+<body>
+ <div class="main-sec">
+  <div class="container rounded bg-white mt-5 mb-6">
+   <form action="del_profile_update" method="post" enctype="multipart/form-data">
+                {% csrf_token%}
+                <h2 style="text-align:center">Edit  Profile</h2>
+
+
+       <div class="row">
+				<div class="col-md-5 border-right">
+					<div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" name="user_img" src="{{d.u_img.url}}">
+						<span class="font-weight-bold"style="position:absolute;left:130px;bottom:5px;top:290px;"><h4><b>{{datas.username}}</b></h4></span>
+						<span class="text-black-50"style="position:absolute;left:100px;bottom:1px;top:320px;"><h6>{{datas.email}}</h6></span>
+					</div>
+				</div>
+				<div class="col-md-5 border-right">
+					<div class="p-3 py-5">
+						<div class="d-flex justify-content-between align-items-center mb-3">
+							<h4 class="text-right">Profile Settings</h4>
+						</div>
+                        <div class="text-align:center;">
+						<div class="row mt-2">
+						Name:	<div class="col-md-12"><label class="labels"></label><input type="text" class="form-control" placeholder="" name="firstname" value="{{datas.firstname}}"></div>
+						</div>
+						<div class="row mt-2">
+							UserName:<div class="col-md-12"><label class="labels"></label><input type="text" class="form-control" placeholder="" name="lastname" value="{{datas.lastname}}"></div>
+						</div>
+						<div class="row mt-3">
+						Mobile Number:	<div class="col-md-12"><label class="labels"></label><input type="text" class="form-control" placeholder="" name="phone" value="{{datas.phone}}"></div>
+						</div>
+						<div class="row mt-3">
+							Address:<div class="col-md-12"><label class="labels"></label><input type="text" class="form-control" placeholder="" name="location" value="{{datas.location}}"></div>
+						</div>
+						<div class="row mt-3">
+							Email ID:<div class="col-md-12"><label class="labels"></label><input type="text" class="form-control" placeholder="" name="email" value="{{datas.email}}"></div>
+						</div>
+                        <div class="row mt-3">
+						Image:	<div class="col-md-12"><label class="labels"></label><input type="file" name="photo" value="" class="form-control"></div>
+						<div class="row mt-3">
+							accountnum:<div class="col-md-12"><label class="labels"></label><input type="number" class="form-control" placeholder="" name="accoundnumber" value="{{datas.accoundnumber}}"></div>
+						</div>
+<!--						<div class="row mt-3">&ndash;&gt;-->
+<!--						<div class="col-md-12"><label class="labels">Image</label><input type="file" name="pimg" value="" class="form-control"></div>-->
+
+						<div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit" style="position:absolute;left:150px;top:800px;">Save</button></div>
+
+						</div>
+                        </div>
+					</div>
+				</div>
+
+       </div>
+
+   </form>
+</div>
+ </div>
+</body>
+</html>

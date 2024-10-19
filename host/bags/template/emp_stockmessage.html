@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>Watches </title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Watches Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+
+</head>
+<body>
+
+
+<!--<div class="main-sec inner-page">-->
+        <!-- //header -->
+        <header class="py-sm-3 pt-3 pb-2" id="home">
+            <div class="container">
+                <!-- nav -->
+                <div class="top-w3pvt d-flex">
+                    <div id="logo">
+                        <h1> <a href="index"><span class="log-w3pvt">W</span>atches</a> <label class="sub-des">Online Store</label></h1>
+                    </div>
+                          <div class="forms ml-auto ">
+                           <a href="../logout" class="btn"><span class="fa fa-sign-out"style="color:black"></span> Sign Out</a>
+						<a href="volapcard"><i class="fa fa-id-card" aria-hidden="true"></i>id Card</a>
+
+                    </div>
+
+                </div>
+
+  <div class="nav-top-wthree">
+                    <nav>
+                        <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+                        <input type="checkbox" id="drop" />
+                        <ul class="menu">
+                               <li ><a href="employee">Home</a></li>
+						<li><a href="emp_myorders">My Oders</a></li>
+						<li class="active"><a href="emp_stockmessage">Stock Message</a></li>
+
+
+
+                        </ul>
+                    </nav>
+  </div>
+                    		</div>
+		</header>
+
+
+
+<script>
+		function copyTextValue() {
+			var e = document.getElementById("select1");
+			var val = e.options[e.selectedIndex].value;
+			document.getElementById("11").value = val;
+		}
+	</script>
+<br>
+<br>
+<br>
+    <form action="replymail" method="post"  style="margin-left: 100px;">
+        {% csrf_token %}
+        <div class="form-group mb-3" style="display: none;">
+          <label
+            for="name"
+             style="margin-top: 18px;">Admin Mail Id
+          </label>
+          <input id="name"name="email" type="text" class="form-control validate"value="{{d}}"required style="width: 250px;"/>
+        </div>
+
+        <div class="form-group mb-3">
+          <label
+            for="description"
+            >Item</label>
+          <div class="header-search">
+                <select class="input-select" id="select1"onchange="copyTextValue()" style="width: 250px;">
+                    <option value="">All Items</option>
+                    {% for i in datas%}
+                    <option value="{{i.pname}}" >{{i.pname}}</option>
+                    {% endfor %}
+                </select>
+        </div>
+        <input class="input" name="sr" placeholder="Type Here" id="11" required style="width: 250px;">
+        </div>
+        <div class="form-group mb-3">
+          <label
+            for="description"
+            >Message</label>
+          <input name="message"
+            class="form-control validate"
+            rows="3"
+            style="width: 250px;"
+            required
+          >
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-block text-uppercase" style="width: 100px;">SEND</button>
+          </div>
+
+
+
+
+    </div>
+    <!-- <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+      <div class="tm-product-img-dummy mx-auto">
+        <i
+          class="fas fa-cloud-upload-alt tm-upload-icon"
+          onclick="document.getElementById('img').click();"
+        ></i>
+      </div> -->
+      <!-- </div> -->
+      <label style="color: white;" for="description">{{ms}}</label>
+    </div>
+  </form>
+
+		<!-- jQuery Plugins -->
+		<script src="{% static 'js/jquery.min.js'%}"></script>
+		<script src="{% static 'js/bootstrap.min.js'%}"></script>
+		<script src="{% static 'js/slick.min.js'%}"></script>
+		<script src="{% static 'js/nouislider.min.js'%}"></script>
+		<script src="{% static 'js/jquery.zoom.min.js'%}"></script>
+		<script src="{% static 'js/main.js'%}"></script>
+
+</body>
+</html>

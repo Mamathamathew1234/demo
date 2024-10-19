@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>user orders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords"
+		content="Fresh Meats" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--// Meta tag Keywords -->
+
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="{%static 'css/bootstrap.css' %}">
+	<!-- Bootstrap-Core-CSS -->
+	<link href="{%static 'css/css_slider.css' %}" type="text/css" rel="stylesheet" media="all">
+	<!-- css slider -->
+	<link rel="stylesheet" href="{%static 'css/style.css' %}" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link href="css/font-awesome.min.css' %}" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+
+    <!-- Web-Fonts -->
+	<link
+		href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
+		rel="stylesheet">
+	<link
+		href="//fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+		rel="stylesheet">
+	<!-- //Web-Fonts -->
+
+</head>
+
+<body>
+<!-- header -->
+  <div class="main-sec inner-page">
+        <!-- //header -->
+        <header class="py-sm-3 pt-3 pb-2" id="home">
+            <div class="container">
+                <!-- nav -->
+                <div class="top-w3pvt d-flex">
+                    <div id="logo">
+                        <h1> <a href="index"><span class="log-w3pvt">W</span>atches</a> <label class="sub-des">Online Store</label></h1>
+                    </div>
+
+                    <div class="forms ml-auto">
+
+                        <a href="../logout" class="btn"><span class="fa fa-sign-out"style="color:black"></span> Sign Out</a>
+
+                    </div>
+                </div>
+                  <div class="nav-top-wthree">
+                    <nav>
+                        <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+                        <input type="checkbox" id="drop" />
+                        <ul class="menu">
+                            <li><a href="userhome">Home</a></li>
+                            <li><a href="user_about">About Us</a></li>
+                            <li><a href="user_collection">Collections</a></li>
+                            <li><a href="user_contact">Contact</a></li>
+							<li class="active"><a href="user_orders">Orders</a> </li>
+
+                        </ul>
+                    </nav>
+                  </div>
+            </div>
+		</header>
+  </div>
+	<!-- //navigation -->
+	<!-- //header2 -->
+
+	<!-- banner -->
+
+
+<!--view order-->
+<div class="map-full">
+	<div class="contact-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 mt-4">
+					<div class="heading-title text-center">
+						<h1 style="position:absolute;left:400px;right:500px">Order Details</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+
+
+<div class="map-full">
+	<div class="contact-box">
+        <div class="container-fluid">
+			<table class="table table-stripped mt-5" border="2">
+				<thead>
+				<tr>
+			       <th><center>Order Id</center></th>
+<!--					<th><center>Item</center></th>-->
+					<th><center>UserName</center></th>
+					<th><center>Address</center></th>
+					<th><center>Contact</center></th>
+					<th><center>Email</center></th>
+					<th><center>Name</center></th>
+					<th><center>Image</center></th>
+					<th><center>Amount</center></th>
+					<th><center>Payment Mode</center></th>
+					<th><center>Status</center></th>
+
+		  		</tr>
+		  		</thead>
+				<tbody>
+				{% for i in order %}
+
+				<tr>
+					<td style="color:blue;"><u><center>{{i.order_id}}</center></u></td>
+<!--					<td><center><img src="{{i.customer.pimg.url}}" height="90" width="90"></center></td>-->
+					<td><center>{{i.customer.User_Name}} </center></td>
+					<td><center>{{i.customer.u_address}},{{i.customer.u_city}},{{i.customer.u_district}}</center></td>
+					<td><center>{{i.customer.UserPhone}}</center></td>
+					<td><center>{{i.customer.User_Email}}</center></td>
+					<td><center>{{i.product.pname}}</center></td>
+					<td><center><img src="{{i.product.pimg.url}}"height="50px";width="50px;"></center></td>
+					<td><center>{{i.total_price}}</center></td>
+					<td><center>{{i.payment_mode}}</center></td>
+					<td><center>{{i.status}}</center>
+<!--						<a href="../update_order_status/{{i.id}}" class="btn btn-primary" id="show">Update Status</a>-->
+					</td>
+				</tr>
+				{% endfor %}
+
+
+
+
+
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<!--//view order-->
+
+	<!-- copyright -->
+	<div class="cpy-right text-center py-3" style="margin-top:20px;">
+		<p>Watches. All rights reserved | Design by Mstar
+
+		</p>
+	</div>
+	<!-- //copyright -->
+	<!-- move top icon -->
+	<a href="#home" class="move-top text-center">
+		<span class="fa fa-level-up" aria-hidden="true"></span>
+	</a>
+	<!-- //move top icon -->
+
+
+</body>
+</html>
